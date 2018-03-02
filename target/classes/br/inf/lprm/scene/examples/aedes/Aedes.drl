@@ -2,26 +2,29 @@ package br.ufes.inf.lprm.scene.examples.aedes;
 
 import br.ufes.inf.lprm.scene.base.*;
 import br.ufes.inf.lprm.scene.examples.shared.*;
+//import br.ufes.inf.lprm.scene.model.impl.Situation;
 
 import java.lang.Math;
 
 global java.util.List list;
+
+
 /*Mosquito Apto a Voar
 
-Condição de ativação: Mosquito não deve ter voado durante o dia. Desativa: Após mosquito voar.
+CondiÃ§Ã£o de ativaÃ§Ã£o: Mosquito nÃ£o deve ter voado durante o dia. Desativa: ApÃ³s mosquito voar.
 Mosquito Apto a botar
-Condição de ativação: Após desativação do “apto a voar”. Desativa: Após mosquito botar.
+CondiÃ§Ã£o de ativaÃ§Ã£o: ApÃ³s desativaÃ§Ã£o do â€œapto a voarâ€�. Desativa: ApÃ³s mosquito botar.
 Ovos chocando
-Condição de ativação: Após desativação do “apto a botar” Desativa: após 20 dias ou até agente combater.
+CondiÃ§Ã£o de ativaÃ§Ã£o: ApÃ³s desativaÃ§Ã£o do â€œapto a botarâ€� Desativa: apÃ³s 20 dias ou atÃ© agente combater.
 Mosquito nasce
-Condição de ativação: Após desativação do “ovos chocando” Desativa: Após mosquito nascer.
+CondiÃ§Ã£o de ativaÃ§Ã£o: ApÃ³s desativaÃ§Ã£o do â€œovos chocandoâ€� Desativa: ApÃ³s mosquito nascer.
 
 Agente sendo chamado
-Condição de ativação: Com a condição “ovos chocando” Desativa: Após 3 dias.
+CondiÃ§Ã£o de ativaÃ§Ã£o: Com a condiÃ§Ã£o â€œovos chocandoâ€� Desativa: ApÃ³s 3 dias.
 Agente atuando
-Condição de ativação: Com a desativação de “agente sendo chamado” Desativa: Após combater 5 casas aleatoriamente.
+CondiÃ§Ã£o de ativaÃ§Ã£o: Com a desativaÃ§Ã£o de â€œagente sendo chamadoâ€� Desativa: ApÃ³s combater 5 casas aleatoriamente.
 Chovendo
-Condição de ativação: 15 dias após última execução / início da simulação Desativa: Após chover*/
+CondiÃ§Ã£o de ativaÃ§Ã£o: 15 dias apÃ³s Ãºltima execuÃ§Ã£o / inÃ­cio da simulaÃ§Ã£o Desativa: ApÃ³s chover*/
 
 declare Mosquito
 @role(event)
@@ -30,7 +33,7 @@ end
 rule "mosquitoLife"
 @role( situation )
 @type(lifeMosquito)
- when
+when
         Scenary( $houses: scenary )
         $house: House() from $houses
         $mosq: Mosquito(controlfly==false) from $house.getMosquitos()
@@ -45,4 +48,4 @@ rule "mosquitoLife"
     Mosquito() over window:time( 10s)
     then
     System.out.println("Deu certo");
-    end
+end

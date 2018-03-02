@@ -33,21 +33,11 @@ import org.drools.time.SessionPseudoClock;
  * This is a sample class to launch a rule.
  */
 
-class RuleEngineThread extends Thread {	
-	private StatefulKnowledgeSession ksession;
-	public RuleEngineThread(StatefulKnowledgeSession ksession) {
-		this.ksession = ksession;
-	}
-    public void run() {  	
-    	this.ksession.fireUntilHalt(); 	
-    }
-}
-
 public class AedesMain {
 
     public static final void main(String[] args) {
         
-        try {
+    	try {
         	
             // load up the knowledge base
             KnowledgeBase kbase = readKnowledgeBase();
@@ -59,18 +49,24 @@ public class AedesMain {
             
             final RuleEngineThread eng = new RuleEngineThread(ksession);
 			eng.start();			
-			Scenary ufes = new Scenary("c0,c1,c2,c3,c4,c5,c6,c7,c8,c9","c0-c1,c1-c2,c2-c3,c3-c4,c4-c5,c5-c6,c6-c7,c7-c8,c8-c9","","c0,c1,c2,c3,c4,c5,c6,c7,c8,c9","c0",50);
+			Scenary ufes = new Scenary("c0,c1,c2,c3,c4,c5,c6,c7,c8,c9",
+									   "c0-c1,c1-c2,c2-c3,c3-c4,c4-c5,c5-c6,c6-c7,c7-c8,c8-c9",
+									   "",
+									   "c0,c1,c2,c3,c4,c5,c6,c7,c8,c9",
+									   "c0",
+									   50);
 			
-                        FactHandle fh1 = ksession.insert(ufes);
+            FactHandle fh1 = ksession.insert(ufes);
            
-            while(true)
-       {
-           Thread.sleep(3000);
-                        SessionPseudoClock clock = ksession.getSessionClock();
-                        clock.advanceTime(20, TimeUnit.DAYS);
-                        ksession.update(fh1, ufes);
-       }
-        } catch (Throwable t) {
+            while(true){
+            	Thread.sleep(3000);
+                SessionPseudoClock clock = ksession.getSessionClock();
+                clock.advanceTime(20, TimeUnit.DAYS);
+                ksession.update(fh1, ufes);
+            }
+        } 
+    	
+    	catch (Throwable t) {
             t.printStackTrace();
         }
     }

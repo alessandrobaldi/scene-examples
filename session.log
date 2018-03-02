@@ -13,3 +13,38 @@
 19:01:55,754 DEBUG SCENELogger:22 - UPDATE - TYPE: br.ufes.inf.lprm.scene.examples.fever.Fever	ID: -1173254863	CAST: {f1=br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da}
 19:01:58,657 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
 19:02:01,660 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
+20:29:26,416 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:26,438 DEBUG SCENELogger:14 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito	ID: -1350954286	CAST: {$house=br.ufes.inf.lprm.scene.examples.shared.House@3c01cfa1, $mosq=br.ufes.inf.lprm.scene.examples.shared.Mosquito@5b7a8434}
+20:29:26,485 DEBUG SCENELogger:16 - 	Activation timestamp: 1969 12 31 21:00:00.
+20:29:26,489 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito@2c94a852
+20:29:26,493 DEBUG SCENELogger:22 - UPDATE - TYPE: br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito	ID: -1350954286	CAST: {$house=br.ufes.inf.lprm.scene.examples.shared.House@3c01cfa1, $mosq=br.ufes.inf.lprm.scene.examples.shared.Mosquito@5b7a8434}
+20:29:29,424 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:32,426 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:35,428 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:38,430 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:41,432 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:44,432 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:47,433 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:50,436 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:53,438 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:56,441 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:29:59,443 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:36:51,852 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:36:51,874 DEBUG SCENELogger:14 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito	ID: 2094600639	CAST: {$house=br.ufes.inf.lprm.scene.examples.shared.House@3c01cfa1, $mosq=br.ufes.inf.lprm.scene.examples.shared.Mosquito@5b7a8434}
+20:36:51,919 DEBUG SCENELogger:16 - 	Activation timestamp: 1969 12 31 21:00:00.
+20:36:51,922 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito@303cc0
+20:36:51,926 DEBUG SCENELogger:22 - UPDATE - TYPE: br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito	ID: 2094600639	CAST: {$house=br.ufes.inf.lprm.scene.examples.shared.House@3c01cfa1, $mosq=br.ufes.inf.lprm.scene.examples.shared.Mosquito@5b7a8434}
+20:36:54,859 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:36:57,860 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:37:00,863 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:41:06,967 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:41:06,986 DEBUG SCENELogger:14 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito	ID: -1299102197	CAST: {$house=br.ufes.inf.lprm.scene.examples.shared.House@5c45d770, $mosq=br.ufes.inf.lprm.scene.examples.shared.Mosquito@7cbd9d24}
+20:41:07,034 DEBUG SCENELogger:16 - 	Activation timestamp: 1969 12 31 21:00:00.
+20:41:07,038 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito@25f023d0
+20:41:07,041 DEBUG SCENELogger:22 - UPDATE - TYPE: br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito	ID: -1299102197	CAST: {$house=br.ufes.inf.lprm.scene.examples.shared.House@5c45d770, $mosq=br.ufes.inf.lprm.scene.examples.shared.Mosquito@7cbd9d24}
+20:41:09,974 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:43:57,918 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Scenary@16b2bb0c
+20:43:57,938 DEBUG SCENELogger:14 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito	ID: 1344241022	CAST: {$house=br.ufes.inf.lprm.scene.examples.shared.House@4eaf3684, $mosq=br.ufes.inf.lprm.scene.examples.shared.Mosquito@39d9314d}
+20:43:57,983 DEBUG SCENELogger:16 - 	Activation timestamp: 1969 12 31 21:00:00.
+20:43:57,987 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito@613da5c6
+20:43:57,991 DEBUG SCENELogger:22 - UPDATE - TYPE: br.ufes.inf.lprm.scene.examples.aedes.lifeMosquito	ID: 1344241022	CAST: {$house=br.ufes.inf.lprm.scene.examples.shared.House@4eaf3684, $mosq=br.ufes.inf.lprm.scene.examples.shared.Mosquito@39d9314d}
