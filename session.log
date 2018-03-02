@@ -1,0 +1,15 @@
+18:44:22,569 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
+18:44:23,581 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
+18:44:23,611 DEBUG SCENELogger:14 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.scene.examples.fever.Fever	ID: -963918839	CAST: {f1=br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da}
+18:44:23,689 DEBUG SCENELogger:16 - 	Activation timestamp: 2018 02 18 18:44:23.
+18:44:23,696 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.fever.Fever@163089b4
+18:44:23,700 DEBUG SCENELogger:22 - UPDATE - TYPE: br.ufes.inf.lprm.scene.examples.fever.Fever	ID: -963918839	CAST: {f1=br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da}
+18:44:26,588 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
+19:01:54,642 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
+19:01:55,652 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
+19:01:55,681 DEBUG SCENELogger:14 - SITUATION ACTIVATION - TYPE: br.ufes.inf.lprm.scene.examples.fever.Fever	ID: -1173254863	CAST: {f1=br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da}
+19:01:55,742 DEBUG SCENELogger:16 - 	Activation timestamp: 2018 02 18 19:01:55.
+19:01:55,750 DEBUG SCENELogger:17 - INSERT - br.ufes.inf.lprm.scene.examples.fever.Fever@4d8aaf22
+19:01:55,754 DEBUG SCENELogger:22 - UPDATE - TYPE: br.ufes.inf.lprm.scene.examples.fever.Fever	ID: -1173254863	CAST: {f1=br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da}
+19:01:58,657 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
+19:02:01,660 DEBUG SCENELogger:22 - UPDATE - br.ufes.inf.lprm.scene.examples.shared.Person@2b9ed6da
