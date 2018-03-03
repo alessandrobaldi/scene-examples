@@ -12,9 +12,6 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import br.ufes.inf.lprm.scene.examples.shared.Mosquito;
-import br.ufes.inf.lprm.scene.publishing.Publish;
-import br.ufes.inf.lprm.situation.Role;
-import br.ufes.inf.lprm.situation.SituationType;
 import java.util.List;
 import java.util.Random;
 
@@ -22,10 +19,8 @@ import java.util.Random;
  *
  * @author alessandro
  */
-public class mosquitoAptAct extends SituationType{
-    @Role(label="$house")
+public class mosquitoAptAct{
     private House actual;
-    @Role(label = "$mosq")
     private Mosquito flying;
     public void setActual(House actual) {
 		this.actual = actual;

@@ -9,18 +9,12 @@ import br.ufes.inf.lprm.scene.examples.shared.Mosquito;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
-import br.ufes.inf.lprm.scene.publishing.Publish;
-import br.ufes.inf.lprm.situation.Role;
-import br.ufes.inf.lprm.situation.SituationType;
 /**
  *
  * @author alessandro
  */
-public class lifeMosquito extends SituationType{
-     @Role(label="$mosq")
+public class lifeMosquito{
      private Mosquito living;
-     @Role(label="$house")
      private House actual;
 
     public House getActual() {

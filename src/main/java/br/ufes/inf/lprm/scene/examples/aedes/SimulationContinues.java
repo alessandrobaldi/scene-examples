@@ -10,15 +10,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import br.ufes.inf.lprm.scene.publishing.Publish;
-import br.ufes.inf.lprm.situation.Role;
-import br.ufes.inf.lprm.situation.SituationType;
 /**
  *
  * @author alessandro
  */
-public class SimulationContinues extends SituationType{
-    @Role(label = "$sc")
+public class SimulationContinues{
 	private Scenary executing;
 
     public Scenary getExecuting() {

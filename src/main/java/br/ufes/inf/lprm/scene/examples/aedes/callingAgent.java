@@ -10,15 +10,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import br.ufes.inf.lprm.scene.publishing.Publish;
-import br.ufes.inf.lprm.situation.Role;
-import br.ufes.inf.lprm.situation.SituationType;
 /**
  *
  * @author alessandro
  */
-public class callingAgent extends SituationType{
-     @Role(label="$house")
+public class callingAgent{
      private House calling;
 
     public House getCalling() {
@@ -29,15 +25,14 @@ public class callingAgent extends SituationType{
         this.calling = calling;
     }
      
-     @Override
 	public void setActive() {
-		super.setActive();
+		//super.setActive();
 		
 	}
-	@Override
+	
 	public void setInactive() {
-		super.setInactive();
-              calling.callAgent();
+		//super.setInactive();
+              //calling.callAgent();
 	}	
      
 }

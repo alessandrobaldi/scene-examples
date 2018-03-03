@@ -13,15 +13,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import br.ufes.inf.lprm.scene.publishing.Publish;
-import br.ufes.inf.lprm.situation.Role;
-import br.ufes.inf.lprm.situation.SituationType;
 /**
  *
  * @author alessandro
  */
-public class DayPass extends SituationType{
-     @Role(label="$sc")
+public class DayPass{
      private Scenary passing;
 
     public Scenary getPassing() {
@@ -31,16 +27,16 @@ public class DayPass extends SituationType{
     public void setPassing(Scenary passing) {
         this.passing = passing;
     }
-     
-    @Override
+    
+    //Ver como resolver isso
 	public void setActive() {
-		super.setActive();
-                passing.clearDay();
+		//super.setActive(); 
+        passing.clearDay();
 		System.out.println("another day");
 	}
-	@Override
+	
 	public void setInactive() {
-		super.setInactive();
+		//super.setInactive();
                 
 	}	
      

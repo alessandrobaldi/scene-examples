@@ -8,16 +8,11 @@ import br.ufes.inf.lprm.scene.examples.shared.House;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
-import br.ufes.inf.lprm.scene.publishing.Publish;
-import br.ufes.inf.lprm.situation.Role;
-import br.ufes.inf.lprm.situation.SituationType;
 /**
  *
  * @author alessandro
  */
-public class hatchedEggs extends SituationType{
-     @Role(label="$house")
+public class hatchedEggs{
      private House hatching;
 
     public House getHatching() {
