@@ -5,8 +5,8 @@ import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
 import br.ufes.inf.lprm.scene.examples.shared.Scenary;
 
 import java.util.concurrent.TimeUnit;
-
 import org.drools.core.time.SessionPseudoClock;
+
 import org.kie.api.KieBase;
 import org.kie.api.KieBaseConfiguration;
 import org.kie.api.KieServices;

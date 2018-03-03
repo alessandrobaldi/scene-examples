@@ -34,39 +34,38 @@ Chovendo
 CondiÃ§Ã£o de ativaÃ§Ã£o: 15 dias apÃ³s Ãºltima execuÃ§Ã£o / inÃ­cio da simulaÃ§Ã£o Desativa: ApÃ³s chover*/
 
 
-/*declare AedesSituation extends Situation
+declare AedesSituation extends Situation
+	mosquito: Sensor @part
+	house: House @part
+	person: Person @part
     transactions: List @part
+    /*Entre outros, definir como @part todos os envolvidos na analise de situações*/
 end
 
-rule "mosquitoLife"
 @role(situation)
-@type(TemperatureSituation)
+@type(AedesSituation)
+rule "test mosquito"
     when
-       
+	    Mosquito() over window:time(10s)
     then
-       SituationHelper.situationDetected(drools);
-end*/
-
-/*declare Mosquito
-@role(event)
+    	System.out.println("Deu certo");
+    	SituationHelper.situationDetected(drools);
 end
 
-rule "mosquitoLife"
-@role( situation )
-@type(lifeMosquito)
-when
-        Scenary( $houses: scenary )
-        $house: House() from $houses
-        $mosq: Mosquito(controlfly==false) from $house.getMosquitos()
-        
-    then
-    SituationHelper.situationDetected(drools);
-    end
-    
-    
-    rule "testmosquito"
+/*
+ Esse exemplo ficou meio feio, mas a ideia é mais ou menos essa!
+ Vamos modificar a estrutura de dados e melhorar isso. :-)
+*/
+rule "Ocorrerou a presença de 3 mosquitos em um intervalo de 2 minutos"
+@role(situation)
+@type(AedesSituation)
     when
-    Mosquito() over window:time( 10s)
-    then
-    System.out.println("Deu certo");
-end*/
+       house : House();
+       transactions: MoquistoList(size >= 3) from accumulate(
+          transaction: House(houseId == house.houseId) over window:time (2m),
+          collectList(transaction)
+       )
+     then
+       SituationHelper.situationDetected(drools);
+end 
+    
