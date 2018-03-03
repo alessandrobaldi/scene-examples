@@ -1,12 +1,19 @@
 package br.ufes.inf.lprm.scene.examples.aedes;
 
-import br.ufes.inf.lprm.scene.base.*;
-import br.ufes.inf.lprm.scene.examples.shared.*;
+/*import br.ufes.inf.lprm.scene.base.*;
+import br.ufes.inf.lprm.scene.examples.shared.*;*/
 //import br.ufes.inf.lprm.scene.model.impl.Situation;
 
 import java.lang.Math;
 
-global java.util.List list;
+import java.util.List;
+
+import br.ufes.inf.lprm.scene.model.impl.Situation;
+import br.ufes.inf.lprm.scene.util.SituationHelper;
+import br.ufes.inf.lprm.situation.annotations.part;
+import br.ufes.inf.lprm.situation.model.events.*;
+
+//global java.util.List list;
 
 
 /*Mosquito Apto a Voar
@@ -26,7 +33,21 @@ CondiÃ§Ã£o de ativaÃ§Ã£o: Com a desativaÃ§Ã£o de â€œagente sendo
 Chovendo
 CondiÃ§Ã£o de ativaÃ§Ã£o: 15 dias apÃ³s Ãºltima execuÃ§Ã£o / inÃ­cio da simulaÃ§Ã£o Desativa: ApÃ³s chover*/
 
-declare Mosquito
+
+/*declare AedesSituation extends Situation
+    transactions: List @part
+end
+
+rule "mosquitoLife"
+@role(situation)
+@type(TemperatureSituation)
+    when
+       
+    then
+       SituationHelper.situationDetected(drools);
+end*/
+
+/*declare Mosquito
 @role(event)
 end
 
@@ -48,4 +69,4 @@ when
     Mosquito() over window:time( 10s)
     then
     System.out.println("Deu certo");
-end
+end*/

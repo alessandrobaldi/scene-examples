@@ -49,7 +49,6 @@ import br.ufes.inf.lprm.scene.base.listeners.SCENESessionListener;
 import br.ufes.inf.lprm.scene.examples.shared.Scenary;
 
 import org.drools.core.time.SessionPseudoClock;
-import org.junit.Test;
 import org.kie.api.KieBase;
 import org.kie.api.KieBaseConfiguration;
 import org.kie.api.KieServices;
@@ -74,7 +73,9 @@ public class AedesMain {
 
 	static final Logger LOG = LoggerFactory.getLogger(AedesMain.class);
 	
-    public static final void main() throws InterruptedException{
+    public static final void main(String[] args) throws InterruptedException{
+
+        System.out.print("Starting Project");
     	KieServices kieServices = KieServices.Factory.get();
 
         KieContainer kContainer = kieServices.getKieClasspathContainer();
@@ -92,6 +93,7 @@ public class AedesMain {
 				   50);
         
         LOG.info("Creating kieBase");
+        System.out.print("Creating kieBase");
 
         KieBaseConfiguration config = KieServices.Factory.get().newKieBaseConfiguration();
         config.setOption(EventProcessingOption.STREAM);
@@ -105,9 +107,10 @@ public class AedesMain {
         }
 
         LOG.info("Creating kieSession");
+        System.out.println("Creating kieSession");
         KieSession session = kieBase.newKieSession();
 
-        SceneApplication app = new SceneApplication("botox-drugs-scenario", session);
+        SceneApplication app = new SceneApplication("Aedes", session);
 
         session.addEventListener(new SCENESessionListener());
         
@@ -116,7 +119,7 @@ public class AedesMain {
         ruleEngineThread.start();
 
         LOG.info("Now running data");
-        
+        System.out.println("Now running data");
         session.insert(ufes);
     }
         
