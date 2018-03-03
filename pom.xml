@@ -50,11 +50,6 @@
 	  	<version>4.8.1</version>
 	  	<scope>test</scope>
       </dependency>
-	  <dependency>
-	      <groupId>br.ufes.inf.lprm</groupId>
-	      <artifactId>scene-core</artifactId>
-	      <version>1.1.1</version>
-      </dependency>
       <dependency>
           <groupId>org.slf4j</groupId>
           <artifactId>slf4j-api</artifactId>
@@ -70,18 +65,18 @@
 	      <artifactId>kie-api</artifactId>
 	      <version>${drools.version}</version>
       </dependency>
+	  <dependency>
+	      <groupId>br.ufes.inf.lprm</groupId>
+	      <artifactId>scene-core</artifactId>
+	      <version>${scene.version}</version>
+      </dependency>
       
   </dependencies>
+  
   <repositories>
     <repository>
-	<id>jboss</id>
-	<name>jboss</name>
-	<url>https://repository.jboss.org/nexus/content/groups/public/</url>
-    </repository>
-    <repository>
-      <id>situation-api-repo</id>
-      <name>situation-api-repo</name>
-      <url>https://raw.github.com/pereirazc/SCENE/mvn-repo</url>
+      <id>Scene repo</id>
+      <url>https://mymavenrepo.com/repo/BG5Za6vz3CyY7SaQjMOa/</url>
     </repository>
   </repositories>
   
