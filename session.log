@@ -252,3 +252,111 @@ Rule Compilation error : [Rule name='FeverSituation']
 06:03:18,140  INFO AedesMain:109 - Creating kieSession
 06:03:18,205  INFO AedesMain:121 - Now running data
 06:03:18,210 DEBUG SCENELogger:20 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Scenary@21d8bcbe
+06:15:38,675  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/luisr/Desktop/Mestrado/Artigo%20Alessandro/scene-examples/target/classes/META-INF/kmodule.xml
+06:15:38,679 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/luisr/Desktop/Mestrado/Artigo Alessandro/scene-examples/target/classes
+06:15:38,940  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/luisr/Desktop/Mestrado/Artigo Alessandro/scene-examples/target/classes
+06:15:38,948  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\luisr\Desktop\Mestrado\Artigo Alessandro\scene-examples\pom.xml
+06:15:38,950 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:scene-examples:1.1.1
+06:15:38,954  INFO KieRepositoryImpl:113 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:scene-examples:1.1.1,file=C:\Users\luisr\Desktop\Mestrado\Artigo Alessandro\scene-examples\target\classes]
+06:15:38,954  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar!/META-INF/kmodule.xml
+06:15:38,955 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:15:38,961  WARN ClasspathKieProject:261 - Unable to find pom.properties in /C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:15:38,961  WARN ClasspathKieProject:231 - Unable to load pom.properties from/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:15:38,961  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+06:15:38,966 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+06:15:38,967  INFO KieRepositoryImpl:113 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=C:\Users\luisr\.m2\repository\br\ufes\inf\lprm\scene-core\1.1.1\scene-core-1.1.1.jar]
+06:15:40,649 ERROR AbstractKieModule:250 - Unable to build KieBaseModel:scene-examples
+Rule Compilation error : [Rule name='SituationSwitch']
+	br/ufes/inf/lprm/scene/examples/connectionswitch/Rule_SituationSwitch1742232626.java (7:589) : SituationHelper cannot be resolved
+
+Rule Compilation error : [Rule name='SituationConnected']
+	br/ufes/inf/lprm/scene/examples/connectionswitch/Rule_SituationConnected1742232626.java (7:592) : SituationHelper cannot be resolved
+
+Rule Compilation error : [Rule name='FeverSituation']
+	br/ufes/inf/lprm/scene/examples/fever/Rule_FeverSituation1742232626.java (7:482) : SituationHelper cannot be resolved
+
+
+06:15:40,651  INFO AedesMain:42 - Message [id=1, kieBase=scene-examples, level=ERROR, path=SituationRules.drl, line=21, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:15:40,652  INFO AedesMain:42 - Message [id=2, kieBase=scene-examples, level=ERROR, path=SituationRules.drl, line=9, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:15:40,654  INFO AedesMain:42 - Message [id=3, kieBase=scene-examples, level=ERROR, path=FeverSituation.drl, line=6, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:15:40,656  INFO AedesMain:52 - Creating kieBase
+06:15:40,702 DEBUG KnowledgeBaseImpl:196 - Starting Engine in PHREAK mode
+06:15:40,737  INFO AedesMain:59 - There should be rules: 
+06:15:40,738  INFO AedesMain:66 - Creating kieSession
+06:15:40,806  INFO AedesMain:78 - Now running data
+06:15:40,812 DEBUG SCENELogger:20 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Scenary@21d8bcbe
+06:16:49,668  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/luisr/Desktop/Mestrado/Artigo%20Alessandro/scene-examples/target/classes/META-INF/kmodule.xml
+06:16:49,672 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/luisr/Desktop/Mestrado/Artigo Alessandro/scene-examples/target/classes
+06:16:49,925  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/luisr/Desktop/Mestrado/Artigo Alessandro/scene-examples/target/classes
+06:16:49,934  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\luisr\Desktop\Mestrado\Artigo Alessandro\scene-examples\pom.xml
+06:16:49,936 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:scene-examples:1.1.1
+06:16:49,940  INFO KieRepositoryImpl:113 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:scene-examples:1.1.1,file=C:\Users\luisr\Desktop\Mestrado\Artigo Alessandro\scene-examples\target\classes]
+06:16:49,940  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar!/META-INF/kmodule.xml
+06:16:49,940 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:16:49,946  WARN ClasspathKieProject:261 - Unable to find pom.properties in /C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:16:49,946  WARN ClasspathKieProject:231 - Unable to load pom.properties from/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:16:49,946  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+06:16:49,950 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+06:16:49,951  INFO KieRepositoryImpl:113 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=C:\Users\luisr\.m2\repository\br\ufes\inf\lprm\scene-core\1.1.1\scene-core-1.1.1.jar]
+06:16:51,651 ERROR AbstractKieModule:250 - Unable to build KieBaseModel:scene-examples
+Rule Compilation error : [Rule name='SituationSwitch']
+	br/ufes/inf/lprm/scene/examples/connectionswitch/Rule_SituationSwitch1742232626.java (7:589) : SituationHelper cannot be resolved
+
+Rule Compilation error : [Rule name='SituationConnected']
+	br/ufes/inf/lprm/scene/examples/connectionswitch/Rule_SituationConnected1742232626.java (7:592) : SituationHelper cannot be resolved
+
+Rule Compilation error : [Rule name='FeverSituation']
+	br/ufes/inf/lprm/scene/examples/fever/Rule_FeverSituation1742232626.java (7:482) : SituationHelper cannot be resolved
+
+
+06:16:51,653  INFO AedesMain:42 - Message [id=1, kieBase=scene-examples, level=ERROR, path=SituationRules.drl, line=21, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:16:51,653  INFO AedesMain:42 - Message [id=2, kieBase=scene-examples, level=ERROR, path=SituationRules.drl, line=9, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:16:51,655  INFO AedesMain:42 - Message [id=3, kieBase=scene-examples, level=ERROR, path=FeverSituation.drl, line=6, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:16:51,657  INFO AedesMain:52 - Creating kieBase
+06:16:51,697 DEBUG KnowledgeBaseImpl:196 - Starting Engine in PHREAK mode
+06:16:51,726  INFO AedesMain:59 - There should be rules: 
+06:16:51,726  INFO AedesMain:66 - Creating kieSession
+06:16:51,778  INFO AedesMain:78 - Now running data
+06:16:51,783 DEBUG SCENELogger:20 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Scenary@21d8bcbe
+06:17:42,145  INFO ClasspathKieProject:131 - Found kmodule: file:/C:/Users/luisr/Desktop/Mestrado/Artigo%20Alessandro/scene-examples/target/classes/META-INF/kmodule.xml
+06:17:42,151 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/C:/Users/luisr/Desktop/Mestrado/Artigo Alessandro/scene-examples/target/classes
+06:17:42,481  WARN ClasspathKieProject:289 - Unable to find pom.properties in /C:/Users/luisr/Desktop/Mestrado/Artigo Alessandro/scene-examples/target/classes
+06:17:42,489  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml C:\Users\luisr\Desktop\Mestrado\Artigo Alessandro\scene-examples\pom.xml
+06:17:42,491 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:scene-examples:1.1.1
+06:17:42,494  INFO KieRepositoryImpl:113 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:scene-examples:1.1.1,file=C:\Users\luisr\Desktop\Mestrado\Artigo Alessandro\scene-examples\target\classes]
+06:17:42,495  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar!/META-INF/kmodule.xml
+06:17:42,495 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:17:42,501  WARN ClasspathKieProject:261 - Unable to find pom.properties in /C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:17:42,501  WARN ClasspathKieProject:231 - Unable to load pom.properties from/C:/Users/luisr/.m2/repository/br/ufes/inf/lprm/scene-core/1.1.1/scene-core-1.1.1.jar
+06:17:42,501  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+06:17:42,506 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+06:17:42,507  INFO KieRepositoryImpl:113 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=C:\Users\luisr\.m2\repository\br\ufes\inf\lprm\scene-core\1.1.1\scene-core-1.1.1.jar]
+06:17:44,031 ERROR AbstractKieModule:250 - Unable to build KieBaseModel:scene-examples
+Rule Compilation error : [Rule name='SituationSwitch']
+	br/ufes/inf/lprm/scene/examples/connectionswitch/Rule_SituationSwitch1742232626.java (7:589) : SituationHelper cannot be resolved
+
+Rule Compilation error : [Rule name='SituationConnected']
+	br/ufes/inf/lprm/scene/examples/connectionswitch/Rule_SituationConnected1742232626.java (7:592) : SituationHelper cannot be resolved
+
+Rule Compilation error : [Rule name='FeverSituation']
+	br/ufes/inf/lprm/scene/examples/fever/Rule_FeverSituation1742232626.java (7:482) : SituationHelper cannot be resolved
+
+
+06:17:44,033  INFO AedesMain:42 - Message [id=1, kieBase=scene-examples, level=ERROR, path=SituationRules.drl, line=21, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:17:44,034  INFO AedesMain:42 - Message [id=2, kieBase=scene-examples, level=ERROR, path=SituationRules.drl, line=9, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:17:44,035  INFO AedesMain:42 - Message [id=3, kieBase=scene-examples, level=ERROR, path=FeverSituation.drl, line=6, column=0
+   text=Rule Compilation error SituationHelper cannot be resolved]
+06:17:44,038  INFO AedesMain:52 - Creating kieBase
+06:17:44,096 DEBUG KnowledgeBaseImpl:196 - Starting Engine in PHREAK mode
+06:17:44,136  INFO AedesMain:59 - There should be rules: 
+06:17:44,137  INFO AedesMain:66 - Creating kieSession
+06:17:44,212  INFO AedesMain:78 - Now running data
+06:17:44,218 DEBUG SCENELogger:20 - INSERT - br.ufes.inf.lprm.scene.examples.shared.Scenary@21d8bcbe
