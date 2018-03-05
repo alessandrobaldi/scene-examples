@@ -1,0 +1,86 @@
+package br.ufes.inf.lprm.scene.examples.aedes;
+
+import java.util.List;
+
+import br.ufes.inf.lprm.scene.model.impl.Situation;
+import br.ufes.inf.lprm.scene.util.SituationHelper;
+import br.ufes.inf.lprm.situation.annotations.part;
+import br.ufes.inf.lprm.situation.model.events.*;
+import ca.study.scenary.entities.*;
+
+declare AedesSituation extends Situation
+	sc: Scenary @part
+	houses: List @part
+	mosquitos: List @part
+end
+
+declare LifeMosquito extends Situation
+	life: Mosquito @part
+end
+
+declare ScenarySituation extends Situation
+	sc: Scenary @part
+	houses: List @part
+	mosq: Mosquito @part
+end
+
+		
+rule "jasda"
+@role(situation)
+@type(ScenarySituation)
+	when
+		sc: Scenary(houses: scenary)
+		house: House() from houses
+		mosq: Mosquito(controlfly==false) from house.mosquitos
+		
+	then
+		SituationHelper.situationDetected(drools);
+end
+
+rule "vida mosquito"
+@role(situation)
+@type(LifeMosquito)
+    when
+        life: Mosquito(days <= 38, controlfly==false)
+        
+    then
+        SituationHelper.situationDetected(drools);
+end
+
+rule "print (mosquito fodao)"
+	when
+		$sit: ScenarySituation()
+	then
+		System.out.println("Mosquito galatico");
+end
+
+rule "print (pode voar)"
+	when
+		$sit: LifeMosquito()
+	then
+		System.out.println("Mosquito pode voar");
+end
+
+rule "Verifica se a quantidade de mosquitos em uma casa é maior que 1"
+@role(situation)
+@type(AedesSituation)
+	when
+		sc: Scenary(houses: scenary)
+		house: House() from houses
+		mosquitos: List(size >= 1) from accumulate(
+			mosquito: Mosquito(houseId == house.houseId, house.mosquitos.size > 0) over window:time(24h),
+			collectList(mosquito)
+		)
+		
+	then
+		SituationHelper.situationDetected(drools);
+end
+
+rule "Tem mosquito na casa"
+	when
+		$sit: AedesSituation() 
+	then
+		System.out.println("Existe mosquito em uma casa");
+end
+
+
