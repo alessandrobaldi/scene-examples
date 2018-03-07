@@ -91,7 +91,8 @@ public class Mosquito implements Serializable{
 	}
 	
 	public String toString(){
-		return "Id: " + this.getMosquitoId() + " houseId: " + this.getNameHouse() + " dias restantes: " + this.days;
+		//return "Id: " + this.getMosquitoId() + " houseId: " + this.getNameHouse() + " dias restantes: " + this.days;
+		return this.getNameHouse();
 	}
 
 	public int getHouseId() {

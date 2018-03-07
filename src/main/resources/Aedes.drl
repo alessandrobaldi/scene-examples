@@ -1,4 +1,4 @@
-package br.ufes.inf.lprm.scene.examples.aedes;
+package ca.study.scenary.aedes;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ declare ScenarySituation extends Situation
 end
 
 		
-rule "jasda"
+rule "Mosquito pode voar (event)"
 @role(situation)
 @type(ScenarySituation)
 	when
@@ -37,7 +37,7 @@ rule "jasda"
 		SituationHelper.situationDetected(drools);
 end
 
-rule "vida mosquito"
+rule "Vida mosquito"
 @role(situation)
 @type(LifeMosquito)
     when
@@ -47,14 +47,14 @@ rule "vida mosquito"
         SituationHelper.situationDetected(drools);
 end
 
-rule "print (mosquito fodao)"
+rule "Dispara situação de ScenarySituation (test)"
 	when
 		$sit: ScenarySituation()
 	then
-		System.out.println("Mosquito galatico");
+		System.out.println("Situação de ScenarySituation disparada!");
 end
 
-rule "print (pode voar)"
+rule "Mosquito pode voar (situation)"
 	when
 		$sit: LifeMosquito()
 	then
@@ -78,9 +78,9 @@ end
 
 rule "Tem mosquito na casa"
 	when
-		$sit: AedesSituation() 
+		$sit: AedesSituation($m: mosquitos) 
 	then
-		System.out.println("Existe mosquito em uma casa");
+		System.out.println("Existe mosquito na casa " + $m.get(0));
 end
 
 
