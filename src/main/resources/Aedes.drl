@@ -47,11 +47,11 @@ rule "Vida mosquito"
         SituationHelper.situationDetected(drools);
 end
 
-rule "Dispara situação de ScenarySituation (test)"
+rule "Dispara situaÃ§Ã£o de ScenarySituation (test)"
 	when
 		$sit: ScenarySituation()
 	then
-		System.out.println("Situação de ScenarySituation disparada!");
+		System.out.println("SituaÃ§Ã£o de ScenarySituation disparada!");
 end
 
 rule "Mosquito pode voar (situation)"
@@ -61,7 +61,7 @@ rule "Mosquito pode voar (situation)"
 		System.out.println("Mosquito pode voar");
 end
 
-rule "Verifica se a quantidade de mosquitos em uma casa é maior que 1"
+rule "Verifica se a quantidade de mosquitos em uma casa Ã© maior que 1"
 @role(situation)
 @type(AedesSituation)
 	when
@@ -83,4 +83,71 @@ rule "Tem mosquito na casa"
 		System.out.println("Existe mosquito na casa " + $m.get(0));
 end
 
+
+declare liveMosquito extends Situation
+	mosquito: Mosquito @part
+end
+
+declare MosquitoNotMoved extends Situation
+	house: House @part
+	mosquito: Mosquito @part
+end
+
+declare MosquitoNotLayed extends Situation
+	house: House @part
+	mosquito: Mosquito @part
+end
+
+rule "liveMosquito"
+@role(situation)
+@type(liveMosquito)
+    when
+    	    mosquito: Mosquito(days<38)
+    then
+        SituationHelper.situationDetected(drools);
+end
+
+rule "MosquitoNotMoved"
+@role(situation)
+@type(MosquitoNotMoved)
+    when
+     house: House()
+    	    mosquito: Mosquito(controlfly==false) from house.getMosquitos()
+        
+    then
+        SituationHelper.situationDetected(drools);
+end
+
+rule "MosquitoNotLayed"
+@role(situation)
+@type(MosquitoNotLayed)
+    when
+     	house: House()
+        mosquito: Mosquito(controleggs==false) from house.getMosquitos()
+    then
+        SituationHelper.situationDetected(drools);
+end
+
+rule "moving"
+	when
+		$sit: liveMosquito($mosquito:mosquito)
+		$sit2: MosquitoNotMoved(house:house,mosquito == $mosquito)
+	then
+		house.changeMosquito($mosquito);
+		System.out.println("Mosquito has moved");
+		update(house)
+		update($mosquito)
+end
+
+rule "laying eggs"
+when
+		$sit: liveMosquito($mosquito:mosquito)
+		$sit2: MosquitoNotLayed(house:house,mosquito == $mosquito)
+	then
+		$mosquito.setControleggs(true);
+        house.addEggs();
+		System.out.println("Mosquito has layed eggs");
+		update(house)
+		update($mosquito)
+end
 
