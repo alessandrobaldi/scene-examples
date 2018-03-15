@@ -42,6 +42,7 @@ rule "lifeEggs"
     then
     SituationHelper.situationDetected(drools);
 end
+//Faz o casamento da situação quando a casa possui ovos que estão nascendo em focos (menos de 20 dias) - para posteriormente darem origem a mosquitos
 
 rule "trapEggs"
 @role(situation)
@@ -53,16 +54,28 @@ rule "trapEggs"
     then
     SituationHelper.situationDetected(drools);
 end
+//Faz o casamento da situação quando a casa possui ovos que estão nascendo em armadilhas (menos de 4 dias) - para posteriormente chamar o agente
 
 
-rule "houseAptLay"
+rule "houseAptLayFocus"
 @role(situation)
 @type(houseAptLay)
     when
-    	    house: House()
+    	    house: House(activefocus==true)
     then
         SituationHelper.situationDetected(drools);
 end
+//faz o casamento da situação quando o mosquito pode fazer a oviposição na casa (com foco)
+
+rule "houseAptLayTrap"
+@role(situation)
+@type(houseAptLay)
+    when
+    	    house: House(trap==true)
+    then
+        SituationHelper.situationDetected(drools);
+end
+//faz o casamento da situação quando o mosquito pode fazer a oviposição na casa (com armadilha)
 
 rule "MosquitoNotMoved"
 @role(situation)
@@ -73,6 +86,7 @@ rule "MosquitoNotMoved"
     then
         SituationHelper.situationDetected(drools);
 end
+//faz o casamento da situaço quando o mosquito ainda não voou
 
 rule "MosquitoNotLayed"
 @role(situation)
@@ -83,55 +97,63 @@ rule "MosquitoNotLayed"
     then
         SituationHelper.situationDetected(drools);
 end
+//faz o casamento da situaço quando o mosquito ainda não botou
 
 rule "moving"
 	when
-		$sit2: MosquitoNotMoved(house:house,mosquito == $mosquito)
+		Scenary( $houses: scenary )
+		$sit: MosquitoNotMoved($house:house,$mosquito:mosquito)//se há a situaço do mosquito voar
 	then
-		house.changeMosquito($mosquito);
-		System.out.println("Mosquito has moved");
-		update(house)
-		update($mosquito)
+		$house.changeMosquito($mosquito); //o mosquito voa
+		//System.out.println("Mosquito has moved");
+		update($house)
+		//update($mosquito)
 end
+//regra para o mosquito que está voando
 
 rule "laying eggs"
 	when
-		$sit2: MosquitoNotLayed($house:house,mosquito == $mosquito)
-		$sit3: houseAptLay(house == $house)
+		$sit1: MosquitoNotLayed($house:house,$mosquito: mosquito)//se o mosquito não botou
+		$sit2: houseAptLay(house == $house)// e está numa casa apta a botar
 	then
 		$mosquito.setControleggs(true);
-        $house.addEggs();
-		System.out.println("Mosquito has layed eggs");
+        $house.addEggs();//mosquito bota
+		//System.out.println("Mosquito has layed eggs");
 		update($house)
-		update($mosquito)
+		//update($mosquito)
 end
+//regra para o mosquito que está botando
+
 
 rule "hatching eggs"
 	when
 		$house: House()
 		$eggs: Eggs() from $house.getEggs()
-		$sit: lifeEggs(eggs == $eggs, active==false)
+		$sit: lifeEggs(eggs == $eggs, active==false)//se a situaço dos ovos nascendo desativar (após os 20 dias)
 	then
+		$house.addMosquito();//conjunto de ovos viram 10 mosquitos.
 		$house.addMosquito();
-        $house.addMosquito();
-        $house.addMosquito();
-        $house.addMosquito();
-        $house.addMosquito();
-        $house.addMosquito();
-        $house.addMosquito();
-        $house.addMosquito();
-        $house.addMosquito();
-        $house.addMosquito();
+		$house.addMosquito();
+		$house.addMosquito();
+		$house.addMosquito();
+		$house.addMosquito();
+		$house.addMosquito();
+		$house.addMosquito();
+		$house.addMosquito();
+		$house.addMosquito();
         $house.removeEggs($eggs);
 		System.out.println("Eggs are hatched");
 end
+//regra que verifica os ovos eclodindo
+
 
 rule "calling agent"
 when
 		$house: House()
 		$eggs: Eggs() from $house.getEggs()
-		$sit: trapEggs(eggs == $eggs, active==false)
+		$sit: trapEggs(eggs == $eggs, active==false)//se a situação dos ovos na armadilha desativar (após os 4 dias)
 	then
-		$house.callAgent();
+		$house.callAgent();//agente faz o trabalho (de remoção de ovos, focos e mosquitos)
 		System.out.println("Agent Called");
 end
+//regra que chama o agente
